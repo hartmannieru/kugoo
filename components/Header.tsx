@@ -13,7 +13,7 @@ const Header = (props: Props) => {
 }
 
 const HeaderStyled = styled.nav`
-  color: green;
+  
 `
 
 export default Header

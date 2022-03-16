@@ -7,13 +7,18 @@ type Props = {
 
 const theme = {
   colors: {
-    black: '#000000',
+    black: '#282739',
     white: '#ffffff',
     red: '#ff0000',
     grey: {
       600: '#5D6C7B',
     }
   },
+  breakpoints: {
+    md: '992px',
+    sm: '768px',
+    x: '576px'
+  }
 };
 
 const Theme = ({ children }: Props) => (

@@ -12,10 +12,11 @@ const Container = ({children}: Props) => {
 }
 
 const ContainerStyled = styled.div`
-  max-width: 1010px;
+  max-width: 1110px;
   width: 100%;
   margin: 0 auto;
   padding: 0 30px;
+  box-sizing: content-box;
 `
 
 export default Container

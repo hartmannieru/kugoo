@@ -6,10 +6,11 @@ import Theme from 'styles/Theme'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Theme>
         <Header />
         <Component {...pageProps} />
-        <Theme />
         <GlobalStyle />
+      </Theme>
     </>
   )
 }
