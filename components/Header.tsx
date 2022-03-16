@@ -1,16 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import MenuTop from './Menu/MenuTop'
 
 type Props = {}
 
 const Header = (props: Props) => {
   return (
-    <HeaderStyled>Header</HeaderStyled>
+    <HeaderStyled>
+      <MenuTop />
+    </HeaderStyled>
   )
 }
 
 const HeaderStyled = styled.nav`
-  color: red;
+  color: green;
 `
 
 export default Header
