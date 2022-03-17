@@ -1,19 +1,22 @@
-import React from 'react'
+import React, {CSSProperties} from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
 import Container from 'components/Container'
 import Link from 'next/link'
-import Select from 'react-select'
+import Select, {StylesConfig} from 'react-select'
 
-type Props = {}
+type MyOptionType = {
+  label: string;
+  value: string;
+};
 
-const options = [
+const options: MyOptionType[] = [
   { value: 'chocolate', label: 'Везде' },
   { value: 'strawberry', label: 'Самокаты' },
   { value: 'vanilla', label: 'Аксессуары' }
 ]
 
-const style = {
+const selectStyle: StylesConfig<MyOptionType> = {
   control: (base: any) => ({
     ...base,
     border: 0,
@@ -30,8 +33,8 @@ const style = {
     width: `${100}%`,
     fontSize: `${14}px`,
   }),
-  option: (provided: any, state: any) => ({
-    ...provided,
+  option: (base: any, state: any) => ({
+    ...base,
     color: state.isSelected ? '#6F73EE' : '#282739',
     padding: 7,
     fontSize: `${14}px`,
@@ -45,7 +48,9 @@ const style = {
       color: 'white',
     },
   }),
-  indicatorSeparator: () => null,
+  indicatorSeparator: () => ({
+    display: 'none',
+  }),
   dropdownIndicator: () => ({
     display: 'flex',
     alignItems: 'center',
@@ -55,7 +60,7 @@ const style = {
   })
 }
 
-const Menu = (props: Props) => {
+const Menu = () => {
   return (
     <MenuStyled>
       <Container>
@@ -71,7 +76,7 @@ const Menu = (props: Props) => {
           </Link>
           <MenuBoxSearch>
             <MenuSearchSelect>
-              <Select options={options} styles={style} defaultInputValue={options[0].label} />
+              <Select options={options} styles={selectStyle} defaultInputValue={options[0].label} />
             </MenuSearchSelect>
             <MenuSearch type='search' placeholder='Искать самокат KUGO'/>
           </MenuBoxSearch>
