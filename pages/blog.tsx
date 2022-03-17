@@ -1,10 +1,11 @@
+import Container from 'components/Container'
 import React from 'react'
 
 type Props = {}
 
 const BlogPage = (props: Props) => {
   return (
-    <div>BlogPage</div>
+    <Container>BlogPage</Container>
   )
 }
 
