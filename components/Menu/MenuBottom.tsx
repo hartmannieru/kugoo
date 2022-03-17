@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Label from 'components/Label'
 
 type Props = {
-  marginLeft: number
+
 }
 
 const MenuBottom = (props: Props) => {
