@@ -82,15 +82,22 @@ const Menu = () => {
             <MenuSearch type='search' placeholder='Искать самокат KUGO'/>
             <MenuSearchButton />
           </MenuBoxSearch>
-          <MenuComparisonBtn>
-            <Icons name="icon-comparison" color={`${props => props.theme.colors.black}`} size={'20'} />
-          </MenuComparisonBtn>
-          <MenuFavoritesBtn>
-            Избранное
-          </MenuFavoritesBtn>
-          <MenuBasketBtn>
-            Basket
-          </MenuBasketBtn>
+          <Link href='/comparison' passHref>
+            <MenuComparisonBtn>
+              <Icons name="icon-comparison" color={'#282739'} size={'20'} icons={'icons.svg'} />
+            </MenuComparisonBtn>
+          </Link>
+          <Link href='/comparison' passHref>
+            <MenuFavoritesBtn>
+              <Icons name="icon-favorite" color={'#282739'} size={'20'} icons={'icons.svg'} />
+            </MenuFavoritesBtn>
+          </Link>
+          <Link href='/comparison' passHref>
+            <MenuBasketBtn>
+              <Icons name="icon-basket" color={'#6F73EE'} size={'20'} icons={'icons.svg'} />
+              Корзина
+            </MenuBasketBtn>
+          </Link>
         </MenuBox>
       </Container>
     </MenuStyled>
@@ -178,10 +185,26 @@ const MenuSearchSelect = styled.div`
 `
 
 const MenuComparisonBtn = styled.a`
-  
+  display: flex;
+  align-items: center;
+  margin-right: ${rem(25)};
 `
 
-const MenuFavoritesBtn = styled.a``
-const MenuBasketBtn = styled.a``
+const MenuFavoritesBtn = styled.a`
+  display: flex;
+  align-items: center;
+  margin-right: ${rem(25)};
+`
+
+const MenuBasketBtn = styled.a`
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: ${props => props.theme.colors.black};
+  gap: 10px;
+`
 
 export default Menu
