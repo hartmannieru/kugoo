@@ -1,9 +1,10 @@
-import React, {CSSProperties} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
 import Container from 'components/Container'
 import Link from 'next/link'
 import Select, {StylesConfig} from 'react-select'
+import Icons from 'components/Icons'
 
 type MyOptionType = {
   label: string;
@@ -76,12 +77,13 @@ const Menu = () => {
           </Link>
           <MenuBoxSearch>
             <MenuSearchSelect>
-              <Select options={options} styles={selectStyle} defaultInputValue={options[0].label} />
+              <Select options={options} styles={selectStyle} defaultInputValue={options[0].label} instanceId='select-menu' />
             </MenuSearchSelect>
             <MenuSearch type='search' placeholder='Искать самокат KUGO'/>
+            <MenuSearchButton />
           </MenuBoxSearch>
           <MenuComparisonBtn>
-            Сравнение
+            <Icons name="icon-comparison" color={`${props => props.theme.colors.black}`} size={'20'} />
           </MenuComparisonBtn>
           <MenuFavoritesBtn>
             Избранное
@@ -96,7 +98,7 @@ const Menu = () => {
 }
 
 const MenuStyled = styled.nav`
-  margin-bottom: ${rem(40)};
+  margin-bottom: ${rem(35)};
 `
 
 const MenuBox = styled.div`
@@ -131,14 +133,28 @@ const MenuCatalogBtnIcon = styled.i`
 `
 
 const MenuBoxSearch = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   height: ${rem(43)};
   max-width: ${rem(603)};
   padding: ${rem(4)};
-  border: ${rem(1.5)} solid ${props => props.theme.colors.primary};
-  border-radius: 5px;
+  padding-right: 0;
+  border: ${rem(1)} solid ${props => props.theme.colors.primary};
+  border-radius: ${rem(5)};
+  margin-right: ${rem(47)};
+`
+
+const MenuSearchButton = styled.button`
+  position: absolute;
+  top: ${rem(-1)};
+  right: ${rem(-1)};
+  width: ${rem(40)};
+  height: inherit;
+  background: ${props => props.theme.colors.primary} url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.9519 14.8499L10.758 9.65596C11.564 8.61396 11.9999 7.33997 11.9999 5.99997C11.9999 4.39598 11.374 2.89199 10.242 1.75799C9.10996 0.623997 7.60197 0 5.99997 0C4.39798 0 2.88999 0.625997 1.75799 1.75799C0.623997 2.88999 0 4.39598 0 5.99997C0 7.60197 0.625997 9.10996 1.75799 10.242C2.88999 11.376 4.39598 11.9999 5.99997 11.9999C7.33997 11.9999 8.61196 11.564 9.65396 10.76L14.8479 15.9519C14.8632 15.9672 14.8812 15.9793 14.9012 15.9875C14.9211 15.9958 14.9424 16 14.9639 16C14.9855 16 15.0068 15.9958 15.0267 15.9875C15.0466 15.9793 15.0647 15.9672 15.0799 15.9519L15.9519 15.0819C15.9672 15.0667 15.9793 15.0486 15.9875 15.0287C15.9958 15.0088 16 14.9875 16 14.9659C16 14.9444 15.9958 14.9231 15.9875 14.9032C15.9793 14.8833 15.9672 14.8652 15.9519 14.8499ZM9.16796 9.16796C8.31996 10.014 7.19597 10.48 5.99997 10.48C4.80398 10.48 3.67998 10.014 2.83199 9.16796C1.98599 8.31996 1.51999 7.19597 1.51999 5.99997C1.51999 4.80398 1.98599 3.67798 2.83199 2.83199C3.67998 1.98599 4.80398 1.51999 5.99997 1.51999C7.19597 1.51999 8.32196 1.98399 9.16796 2.83199C10.014 3.67998 10.48 4.80398 10.48 5.99997C10.48 7.19597 10.014 8.32196 9.16796 9.16796Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center center;
+  border: ${rem(1)} solid #6F73EE;
+  border-radius: 0 ${rem(5)} ${rem(5)} 0;
 `
 
 const MenuSearch = styled.input`
@@ -161,7 +177,10 @@ const MenuSearchSelect = styled.div`
   height: 100%;
 `
 
-const MenuComparisonBtn = styled.a``
+const MenuComparisonBtn = styled.a`
+  
+`
+
 const MenuFavoritesBtn = styled.a``
 const MenuBasketBtn = styled.a``
 
