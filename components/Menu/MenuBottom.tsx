@@ -32,7 +32,7 @@ const MenuBottom = (props: Props) => {
             </Label>
           </MenuBottomItem>
           <MenuBottomItem>
-            <Link href="/about" passHref>
+            <Link href="/test-drive" passHref>
               <MenuBottomLink>
                 Тест-драйв
               </MenuBottomLink>

@@ -7,7 +7,7 @@ const CatalogPage = (props: Props) => {
   return (
     <>
       <Container>
-        catalog
+        CatalogPage
       </Container>
     </>
   )

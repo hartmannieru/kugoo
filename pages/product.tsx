@@ -3,10 +3,10 @@ import React from 'react'
 
 type Props = {}
 
-const ServicePage = (props: Props) => {
+const ProductPage = (props: Props) => {
   return (
-    <Container>ServicePage</Container>
+    <Container>ProductPage</Container>
   )
 }
 
-export default ServicePage
+export default ProductPage
