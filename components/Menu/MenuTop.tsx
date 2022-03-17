@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Telegram from 'images/menutop/telegram.svg'
 import Viber from 'images/menutop/viber.svg'
 import WhatsApp from 'images/menutop/whatsapp.svg'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -23,9 +24,11 @@ const MenuTop = (props: Props) => {
                 </MenuTopLink>
               </MenuTopItem>
               <MenuTopItem>
-                <MenuTopLink href='#'>
-                  Сотрудничество
-                </MenuTopLink>
+                <Link href='/cooperation' passHref>
+                  <MenuTopLink>
+                    Сотрудничество
+                  </MenuTopLink>
+                </Link>
               </MenuTopItem>
               <MenuTopItem>
                 <MenuTopLink href='#'>

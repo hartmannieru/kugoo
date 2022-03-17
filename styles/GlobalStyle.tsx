@@ -20,5 +20,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Jost', sans-serif;
     text-decoration: none;
   }
+  button {
+    border: none;
+    outline: none;
+  }
 `
 export default GlobalStyle

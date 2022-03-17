@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Menu from './Menu/Menu'
+import MenuBottom from './Menu/MenuBottom'
 import MenuTop from './Menu/MenuTop'
 
 type Props = {}
@@ -10,6 +11,7 @@ const Header = (props: Props) => {
     <HeaderStyled>
       <MenuTop />
       <Menu />
+      <MenuBottom />
     </HeaderStyled>
   )
 }

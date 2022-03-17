@@ -1,10 +1,11 @@
+import Container from 'components/Container'
 import React from 'react'
 
 type Props = {}
 
 const CooperationPage = (props: Props) => {
   return (
-    <div>cooperation</div>
+    <Container>CooperationPage</Container>
   )
 }
 
