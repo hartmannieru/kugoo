@@ -16,7 +16,7 @@ const Header = (props: Props) => {
   )
 }
 
-const HeaderStyled = styled.nav`
+const HeaderStyled = styled.header`
   
 `
 

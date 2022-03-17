@@ -1,3 +1,4 @@
+import { rgba } from "polished";
 import React, {ReactNode} from "react";
 import { ThemeProvider } from "styled-components";
 
@@ -14,6 +15,9 @@ const theme = {
     red: '#ff0000',
     grey: {
       600: '#5D6C7B',
+    },
+    greyrgba: {
+      600: rgba('#5D6C7B', 0.15),
     }
   },
   breakpoints: {

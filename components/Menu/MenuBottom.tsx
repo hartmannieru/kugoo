@@ -22,7 +22,7 @@ const MenuBottom = (props: Props) => {
             </Link>
           </MenuBottomItem>
           <MenuBottomItem>
-            <Link href="/about" passHref>
+            <Link href="/shipping-payment" passHref>
               <MenuBottomLink>
                 Доставка и оплата
               </MenuBottomLink>
@@ -39,23 +39,23 @@ const MenuBottom = (props: Props) => {
             </Link>
           </MenuBottomItem>
           <MenuBottomItem>
-            <Link href="/about" passHref>
+            <Link href="/blog" passHref>
               <MenuBottomLink>
                 Блог
               </MenuBottomLink>
             </Link>
           </MenuBottomItem>
           <MenuBottomItem>
-            <Link href="/about" passHref>
+            <Link href="/contacts" passHref>
               <MenuBottomLink>
                 Контакты
               </MenuBottomLink>
             </Link>
           </MenuBottomItem>
           <MenuBottomItem>
-            <Link href="/about" passHref>
+            <Link href="/stock" passHref>
               <MenuBottomLink>
-                Доставка и оплата
+                Акции
               </MenuBottomLink>
             </Link>
             <Label marginLeft={8}>%</Label>

@@ -5,6 +5,7 @@ import Container from 'components/Container'
 import Link from 'next/link'
 import Select, {StylesConfig} from 'react-select'
 import Icons from 'components/Icons'
+import Logo from 'components/Logo'
 
 type MyOptionType = {
   label: string;
@@ -66,11 +67,7 @@ const Menu = () => {
     <MenuStyled>
       <Container>
         <MenuBox>
-          <Link href='/' passHref>
-            <MenuLogo>
-              Kugoo
-            </MenuLogo>
-          </Link>
+          <Logo marginRight={35} />
           <Link href='/catalog' passHref>
             <MenuCatalogBtn>
               <MenuCatalogBtnIcon />
@@ -115,14 +112,6 @@ const MenuBox = styled.div`
   align-items: center;
 `
 
-const MenuLogo = styled.a`
-  font-weight: 700;
-  font-size: ${rem(30)};
-  line-height: ${rem(43)};
-  text-transform: uppercase;
-  color: ${props => props.theme.colors.black};
-  margin-right: ${rem(35)};
-`
 const MenuCatalogBtn = styled.a`
   display: flex;
   align-items: center;
