@@ -7,6 +7,7 @@ type Props = {
 
 const theme = {
   colors: {
+    primary: '#6F73EE',
     black: '#282739',
     white: '#ffffff',
     red: '#ff0000',

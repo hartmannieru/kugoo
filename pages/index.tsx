@@ -8,11 +8,6 @@ const Home: NextPage = () => {
       <Container>
         <ul>
           <li>
-            <Link href="/">
-              <a>Навигация</a>
-            </Link>
-          </li>
-          <li>
             <Link href="/components">
               <a>Компоненты</a>
             </Link>

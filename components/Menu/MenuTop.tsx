@@ -61,7 +61,7 @@ const MenuTopStyled = styled.nav`
   padding: ${rem(11)} 0;
   background: ${props => props.theme.colors.white};
   border: 1px solid #ECF3FF;
-  margin-bottom: ${rem(40)};
+  margin-bottom: ${rem(30)};
   @media (max-width: ${props => props.theme.breakpoints.x}) {
     opacity: 0; // tmp
   }
