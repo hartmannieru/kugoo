@@ -62,6 +62,66 @@ const Home: NextPage = () => {
               <a>Акции</a>
             </Link>
           </li>
+          <li>
+            <Link href="/blog">
+              <a>Блог</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog">
+              <a>Блог</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog-detailed">
+              <a>Блог. Детальная</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contacts">
+              <a>Контакты</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/basket-empty">
+              <a>Корзина пуста</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/basket">
+              <a>Корзина</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/checkout">
+              <a>Оформление заказа</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/thanks">
+              <a>Страница спасибо</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/not-found">
+              <a>404</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/comparison">
+              <a>Сравнение</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/comparison">
+              <a>Сравнение</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/favorites">
+              <a>Избранное</a>
+            </Link>
+          </li>
         </ul>
       </Container>
     </>
