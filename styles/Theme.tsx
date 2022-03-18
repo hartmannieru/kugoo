@@ -10,10 +10,12 @@ const theme = {
   colors: {
     primary: '#6F73EE',
     background: '#F4F7FB',
+    border: '#EAEBED',
     black: '#282739',
     white: '#ffffff',
     red: '#ff0000',
     grey: {
+      200: '#EAEBED',
       600: '#5D6C7B',
     },
     greyrgba: {

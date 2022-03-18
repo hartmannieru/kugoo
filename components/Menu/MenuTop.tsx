@@ -19,9 +19,11 @@ const MenuTop = (props: Props) => {
           <MenuTopLeft>
             <MenuTopList>
               <MenuTopItem>
-                <MenuTopLink href='#'>
-                  Сервис
-                </MenuTopLink>
+                <Link  href='/service' passHref>
+                  <MenuTopLink>
+                    Сервис
+                  </MenuTopLink>
+                </Link>
               </MenuTopItem>
               <MenuTopItem>
                 <Link href='/cooperation' passHref>
@@ -66,7 +68,6 @@ const MenuTopStyled = styled.nav`
   border: 1px solid #ECF3FF;
   margin-bottom: ${rem(30)};
   @media (max-width: ${props => props.theme.breakpoints.x}) {
-    opacity: 0; // tmp
   }
 `
 
