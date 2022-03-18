@@ -11,6 +11,7 @@ import { Navigation } from 'swiper'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import "swiper/css/pagination";
+import CardLabel from './CardLabel'
 
 type Props = {}
 
@@ -18,6 +19,7 @@ const Card = (props: Props) => {
   return (
     <CardStyled>
       <CardBoxSlider>
+        <CardLabel value='hit' />
         <CardSlider>
           <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             <SwiperSlide>
@@ -160,7 +162,9 @@ const CardContent = styled.div`
   padding: ${rem(20)} ${rem(24)};
 `
 
-const CardBoxSlider = styled.div``
+const CardBoxSlider = styled.div`
+  position: relative;
+`
 
 const CardStyled = styled.div`
   max-width: ${rem(255)};
