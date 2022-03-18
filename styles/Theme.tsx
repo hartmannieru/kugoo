@@ -10,6 +10,7 @@ const theme = {
   colors: {
     primary: '#6F73EE',
     background: '#F4F7FB',
+    border: '#EAEBED',
     black: '#282739',
     white: '#ffffff',
     red: '#ff0000',
