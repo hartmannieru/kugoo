@@ -4,12 +4,12 @@ import { rem } from 'polished'
 
 type Props = {
   children: string,
-  width: string,
-  background: string;
-  color: string;
+  width?: string,
+  background?: string;
+  color?: string;
 }
 
-const ButtonDefault = ({children, width, background, color}: Props) => {
+const ButtonDefault = ({children, width = '200px', background='#6F73EE', color='#fff'}: Props) => {
   return (
     <ButtonDefaultStyled width={width} background={background} color={color}>{children}</ButtonDefaultStyled>
   )

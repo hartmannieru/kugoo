@@ -69,11 +69,6 @@ const Home: NextPage = () => {
             </Link>
           </li>
           <li>
-            <Link href="/blog">
-              <a>Блог</a>
-            </Link>
-          </li>
-          <li>
             <Link href="/blog-detailed">
               <a>Блог. Детальная</a>
             </Link>
@@ -106,11 +101,6 @@ const Home: NextPage = () => {
           <li>
             <Link href="/not-found">
               <a>404</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/comparison">
-              <a>Сравнение</a>
             </Link>
           </li>
           <li>

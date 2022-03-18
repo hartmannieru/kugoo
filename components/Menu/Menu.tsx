@@ -86,12 +86,12 @@ const Menu = () => {
               <Icons name="icon-comparison" color={'#282739'} size={'20'} icons={'icons.svg'} />
             </MenuComparisonBtn>
           </Link>
-          <Link href='/comparison' passHref>
+          <Link href='/favorites' passHref>
             <MenuFavoritesBtn>
               <Icons name="icon-favorite" color={'#282739'} size={'20'} icons={'icons.svg'} />
             </MenuFavoritesBtn>
           </Link>
-          <Link href='/comparison' passHref>
+          <Link href='/basket' passHref>
             <MenuBasketBtn>
               <Icons name="icon-basket" color={'#6F73EE'} size={'20'} icons={'icons.svg'} />
               Корзина

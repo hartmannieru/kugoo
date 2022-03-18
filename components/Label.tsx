@@ -4,7 +4,7 @@ import { rem } from 'polished'
 
 type Props = {
   children: string,
-  marginLeft: number
+  marginLeft?: number
 }
 
 const Label = ({children, marginLeft}: Props) => {
@@ -13,7 +13,7 @@ const Label = ({children, marginLeft}: Props) => {
   )
 }
 
-const LabelStyled = styled.span<{marginLeft: number}>`
+const LabelStyled = styled.span<{marginLeft?: number}>`
   display: inline-flex;
   align-items: center;
   padding: ${rem(0)} ${rem(6)};

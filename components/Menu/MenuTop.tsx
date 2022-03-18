@@ -19,9 +19,11 @@ const MenuTop = (props: Props) => {
           <MenuTopLeft>
             <MenuTopList>
               <MenuTopItem>
-                <MenuTopLink href='#'>
-                  Сервис
-                </MenuTopLink>
+                <Link  href='/service' passHref>
+                  <MenuTopLink>
+                    Сервис
+                  </MenuTopLink>
+                </Link>
               </MenuTopItem>
               <MenuTopItem>
                 <Link href='/cooperation' passHref>

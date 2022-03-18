@@ -5,6 +5,7 @@ import Theme from 'styles/Theme'
 import styled from 'styled-components'
 import Footer from 'components/Footer/Footer'
 import { rem } from 'polished'
+import Subscribe from 'components/Subscribe'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
             <GlobalStyle />
           </Main>
+          <Subscribe />
           <Footer />
         </App>
       </Theme>
