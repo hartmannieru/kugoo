@@ -15,6 +15,7 @@ const theme = {
     white: '#ffffff',
     red: '#ff0000',
     grey: {
+      200: '#EAEBED',
       600: '#5D6C7B',
     },
     greyrgba: {
