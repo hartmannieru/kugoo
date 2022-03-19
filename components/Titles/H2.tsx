@@ -3,17 +3,18 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 
 type Props = {
-  children: string,
+  children: React.ReactNode,
   align?: string
+  marginBottom?: number
 }
 
-const H2 = ({children, align = 'left'}: Props) => {
+const H2 = ({children, align = 'left', marginBottom = 60}: Props) => {
   return (
-    <H2Styled align={align}>{children}</H2Styled>
+    <H2Styled align={align} marginBottom={marginBottom}>{children}</H2Styled>
   )
 }
 
-const H2Styled = styled.h2<{align?: string}>`
+const H2Styled = styled.h2<{align?: string, marginBottom?: number}>`
   font-style: normal;
   font-weight: 600;
   font-size: ${rem(35)};
@@ -21,7 +22,7 @@ const H2Styled = styled.h2<{align?: string}>`
   color: ${props => props.theme.colors.black};
   text-transform: uppercase;
   text-align: ${props => props.align};
-  margin-bottom: ${rem(60)};
+  margin-bottom: ${props => props.marginBottom}px;
 `
 
 export default H2
