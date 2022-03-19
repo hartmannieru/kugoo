@@ -15,7 +15,7 @@ import CardLabel from './CardLabel'
 
 type Props = {
   labelText: string,
-  labelColor: string
+  labelColor?: string
 }
 
 const Card = ({labelText, labelColor}: Props) => {

@@ -35,7 +35,7 @@ const ComponentsPages = (props: Props) => {
           Карточки
         </ComponentsPagesTitle>
         <ComponentsPagesBox>
-          <Card />
+          <Card labelText='Хит' labelColor='green' />
         </ComponentsPagesBox>
       </Container>
     </ComponentsPagesStyled>
