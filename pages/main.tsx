@@ -5,6 +5,7 @@ import { rem } from 'polished'
 import banner from 'images/pages/main/banner-1.webp'
 import H2 from 'components/Titles/H2'
 import Card from 'components/Card'
+import Compilation from 'components/Compilation'
 
 type Props = {}
 
@@ -15,8 +16,13 @@ const MainPage = (props: Props) => {
 
       </MainPageBanner>
       <Container>
-        <H2>Электросамокаты</H2>
-        <Card/>
+        <H2 align='center'>Часто покупают</H2>
+        <Compilation>
+          <Card labelText='Хит' labelColor='green' />
+          <Card labelText='Новинка' labelColor='red' />
+          <Card labelText='Хит' labelColor='green' />
+          <Card labelText='Новинка' labelColor='red' />
+        </Compilation>
       </Container>
     </MainPageStyled>
   )

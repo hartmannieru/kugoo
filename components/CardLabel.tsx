@@ -3,19 +3,17 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 
 type Props = {
-  value?: string
+  labelColor?: string
+  children: string
 }
 
-const CardLabel = ({value}: Props) => {
-  let text = ''
-  value === 'hit' ? text = 'Хит' : text = 'Новинка' 
-
+const CardLabel = ({labelColor, children}: Props) => {
   return (
-    <CardLabelStyled value={value}>{text}</CardLabelStyled>
+    <CardLabelStyled labelColor={labelColor}>{children}</CardLabelStyled>
   )
 }
 
-const CardLabelStyled = styled.div<{value?: string}>`
+const CardLabelStyled = styled.div<{labelColor?: string}>`
   position: absolute;
   top: ${rem(10)};
   left: ${rem(10)};
@@ -28,11 +26,11 @@ const CardLabelStyled = styled.div<{value?: string}>`
   z-index: 2;
   border-radius: ${rem(5)};
   color: ${props => props.theme.colors.white};
-  background: ${props => props.value === 'hit' ? '#EE685F' : '#75D14A'};
+  background: ${props => props.labelColor === 'green' ? '#EE685F' : '#75D14A'};
   font-weight: 500;
   font-size: ${rem(12)};
   line-height: ${rem(17)};
-  text-transform: ${props => props.value === 'hit' ? 'uppercase' : 'normal'};
+  text-transform: ${props => props.labelColor === 'green' ? 'uppercase' : 'normal'};
 `
 
 export default CardLabel

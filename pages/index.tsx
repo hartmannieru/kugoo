@@ -79,11 +79,6 @@ const Home: NextPage = () => {
             </Link>
           </li>
           <li>
-            <Link href="/basket-empty">
-              <a>Корзина пуста</a>
-            </Link>
-          </li>
-          <li>
             <Link href="/basket">
               <a>Корзина</a>
             </Link>

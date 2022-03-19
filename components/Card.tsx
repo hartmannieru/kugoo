@@ -13,13 +13,18 @@ import 'swiper/css/navigation';
 import "swiper/css/pagination";
 import CardLabel from './CardLabel'
 
-type Props = {}
+type Props = {
+  labelText: string,
+  labelColor: string
+}
 
-const Card = (props: Props) => {
+const Card = ({labelText, labelColor}: Props) => {
   return (
     <CardStyled>
       <CardBoxSlider>
-        <CardLabel value='hit' />
+        <CardLabel labelColor={labelColor}>
+          {labelText}
+        </CardLabel>
         <CardSlider>
           <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             <SwiperSlide>
