@@ -38,7 +38,6 @@ const AccordionContainer = styled.div`
   overflow: hidden;
   max-width: ${rem(730)};
   width: 100%;
-  margin: 0 auto;
   color: ${props => props.theme.colors.black};
   padding-bottom: ${rem(1)};
   margin-bottom: ${rem(90)};

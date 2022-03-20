@@ -5,7 +5,8 @@ import H2 from 'components/Titles/H2'
 import ButtonDefault from 'components/Buttons/ButtonDefault'
 import Card from 'components/Card'
 import Label from 'components/Label'
-import Subscribe from 'components/Subscribe'
+import items from './api/accordion-db'
+import Accordion from 'components/Accordion'
 
 type Props = {}
 
@@ -36,6 +37,12 @@ const ComponentsPages = (props: Props) => {
         </ComponentsPagesTitle>
         <ComponentsPagesBox>
           <Card labelText='Хит' labelColor='green' />
+        </ComponentsPagesBox>
+        <ComponentsPagesTitle>
+          Аккордеон
+        </ComponentsPagesTitle>
+        <ComponentsPagesBox>
+          <Accordion items={items} />
         </ComponentsPagesBox>
       </Container>
     </ComponentsPagesStyled>

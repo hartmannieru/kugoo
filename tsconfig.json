@@ -21,6 +21,6 @@
       "images/*": ["./public/images/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/accordion.js"],
   "exclude": ["node_modules"]
 }
