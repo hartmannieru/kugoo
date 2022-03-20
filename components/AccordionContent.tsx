@@ -79,8 +79,10 @@ const Content = styled.div<{itemName?: any, isActive?: boolean}>`
   font-size: ${rem(14)};
   line-height: ${rem(20)};
   height: ${props => {
-    const inner = document.getElementById(props.itemName)
-    return `${props.isActive && inner ? inner.clientHeight : 0}px`
+    if (typeof window !== "undefined") {
+      const inner = document.getElementById(props.itemName)
+      return `${props.isActive && inner ? inner.clientHeight : 0}px`
+    }
   }};
   transition: height 0.35s;
 `

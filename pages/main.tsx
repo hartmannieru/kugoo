@@ -10,9 +10,8 @@ import Compilation from 'components/Compilation'
 import dynamic from 'next/dynamic'
 import items from './api/accordion-db'
 import CardAdvantagesBox from 'components/CardAdvantagesBox'
-// const Accordion = dynamic(() => import('components/Accordion'), { ssr: false })
+const Accordion = dynamic(() => import('components/Accordion'), { ssr: false })
 import LinkDefault from 'components/LinkDefault'
-import Accordion from 'components/Accordion'
 
 type Props = {}
 
@@ -73,9 +72,7 @@ const MainPage = (props: Props) => {
         <Tabs item1={<CardAdvantagesBox itemList={itemList1} />} item2={<CardAdvantagesBox itemList={itemList2} />} />
         <H2 align='center' marginBottom={34}>Отвечаем на вопросы <br /> покупателей</H2>
         <MainPageAccordion>
-          {
-            typeof window !== 'undefined' && <Accordion items={items} />
-          }
+          <Accordion items={items} />
         </MainPageAccordion>
         <H2 align='center'>Часто покупают</H2>
         <Compilation>
