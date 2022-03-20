@@ -10,8 +10,8 @@ import Compilation from 'components/Compilation'
 import dynamic from 'next/dynamic'
 import items from './api/accordion-db'
 import CardAdvantagesBox from 'components/CardAdvantagesBox'
-import LinkDefault from 'components/LinkDefault'
 const Accordion = dynamic(() => import('components/Accordion'), { ssr: false })
+import LinkDefault from 'components/LinkDefault'
 
 type Props = {}
 
