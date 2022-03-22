@@ -126,7 +126,6 @@ const FooterBoxSocial = styled.div`
 `
 
 const FooterStyled = styled.footer`
-  margin-top: auto;
   background: ${props => props.theme.colors.background};
 `
 const FooterBox = styled.div`

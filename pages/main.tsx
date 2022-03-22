@@ -12,6 +12,11 @@ import items from './api/accordion-db'
 import CardAdvantagesBox from 'components/CardAdvantagesBox'
 const Accordion = dynamic(() => import('components/Accordion'), { ssr: false })
 import LinkDefault from 'components/LinkDefault'
+import Banner from 'components/Banner'
+import BannerTitle from 'components/BannerTitle'
+import BannerDescription from 'components/BannerDescription'
+import ButtonDefault from 'components/Buttons/ButtonDefault'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -73,7 +78,7 @@ const itemList2 = [
   },
   {
     img: '/images/card-adv-img-2.png',
-    title: 'Больше в каталоге',
+    title: 'Больше в каталоге', 
     description: <><LinkDefault text='Перейти' /></>,
   },
 ]
@@ -81,7 +86,15 @@ const itemList2 = [
 const MainPage = (props: Props) => {
   return (
     <MainPageStyled>
-      <MainPageBanner></MainPageBanner>
+      <Banner bg='/images/pages/main/banner-1.webp'>
+        <BannerTitle>
+          Электросамокаты Kugoo Kirin от официального дилера
+        </BannerTitle>
+        <BannerDescription>
+          с бесплатной доставкой по РФ от 1 дня
+        </BannerDescription>
+        <ButtonDefault background='#fff' color='#6F73EE' href='catalog'>Перейти в католог</ButtonDefault>
+      </Banner>
       <Container>
         <H2 align='center' marginBottom={18}>
           Предлагаем самые выгодные цены <br /> на продукты Kugoo за счет прямых поставок
@@ -115,15 +128,6 @@ const MainPageText = styled.div`
 `
 
 const MainPageStyled = styled.div``
-
-const MainPageBanner = styled.div`
-  max-width: ${rem(1380)};
-  min-height: ${rem(421)};
-  margin: 0 auto;
-  background: url(${banner.src}) no-repeat center center;
-  background-size: cover;
-  margin-bottom: ${rem(39)};
-`
 
 const MainPageAccordion = styled.div`
   display: flex;
