@@ -12,6 +12,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import "swiper/css/pagination";
 import CardLabel from './CardLabel'
+import ButtonComparison from './ButtonComparison'
 
 type Props = {
   labelText: string,
@@ -25,6 +26,7 @@ const Card = ({labelText, labelColor}: Props) => {
         <CardLabel labelColor={labelColor}>
           {labelText}
         </CardLabel>
+        <ButtonComparison />
         <CardSlider>
           <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             <SwiperSlide>
@@ -90,7 +92,7 @@ const Card = ({labelText, labelColor}: Props) => {
             </CardButton>
           </CardButtonBox>
         </CardBuyBox>
-        <ButtonDefault width={'100%'} background={'#6F73EE'} color={'#ffffff'}>Купить в 1 клик</ButtonDefault>
+        <ButtonDefault width={'100%'} background={'#6F73EE'} color={'#ffffff'} href={''}>Купить в 1 клик</ButtonDefault>
       </CardContent>
     </CardStyled>
   )
