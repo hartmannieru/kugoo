@@ -8,7 +8,7 @@ type Props = {
   width?: string,
   background?: string;
   color?: string;
-  href: string
+  href?: string
 }
 
 const ButtonDefault = ({href='/', children, width = 'auto', background='#6F73EE', color='#fff'}: Props) => {
