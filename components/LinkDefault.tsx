@@ -16,7 +16,7 @@ const LinkDefault = ({text}: Props) => {
 }
 
 const LinkDefaultStyled = styled.a`
-  position: relative;
+  position: relative; 
   font-weight: 500;
   font-size: ${rem(14)};
   line-height: ${rem(20)};

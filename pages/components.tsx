@@ -7,6 +7,7 @@ import Card from 'components/Card'
 import Label from 'components/Label'
 import items from './api/accordion-db'
 import Accordion from 'components/Accordion'
+import LinkDefault from 'components/LinkDefault'
 
 type Props = {}
 
@@ -19,6 +20,12 @@ const ComponentsPages = (props: Props) => {
         </ComponentsPagesTitle>
         <ComponentsPagesBox>
           <Label>Рассрочка</Label>
+        </ComponentsPagesBox>
+        <ComponentsPagesTitle>
+          Ссылки
+        </ComponentsPagesTitle>
+        <ComponentsPagesBox>
+          <LinkDefault text={'LinkDefault'} />
         </ComponentsPagesBox>
         <ComponentsPagesTitle>
           Заголовки
