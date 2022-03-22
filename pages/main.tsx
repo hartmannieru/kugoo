@@ -1,8 +1,7 @@
-import Container from 'components/Container'
 import React from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
-import banner from 'images/pages/main/banner-1.webp'
+import Container from 'components/Container'
 import H2 from 'components/Titles/H2'
 import Tabs from 'components/Tabs'
 import Card from 'components/Card'
@@ -16,7 +15,6 @@ import Banner from 'components/Banner'
 import BannerTitle from 'components/BannerTitle'
 import BannerDescription from 'components/BannerDescription'
 import ButtonDefault from 'components/Buttons/ButtonDefault'
-import Link from 'next/link'
 
 type Props = {}
 
