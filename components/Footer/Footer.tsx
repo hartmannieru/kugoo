@@ -7,6 +7,9 @@ import Link from 'next/link'
 import Logo from 'components/Logo'
 import Image from 'next/image'
 import SocialItem from 'components/SocialItem'
+import PayItem from 'components/PayItem'
+import FooterData from './FooterData'
+import FooterAddresses from './FooterAddresses'
 
 type Props = {}
 
@@ -111,6 +114,8 @@ const Footer = (props: Props) => {
           </FooterBoxItem>
           <FooterBoxItem>
             <FooterTitle marginBottom={17}>Контакты</FooterTitle>
+            <FooterData />
+            <FooterAddresses />
           </FooterBoxItem>
         </FooterBox>
         <FooterBoxSocial>
@@ -132,10 +137,54 @@ const Footer = (props: Props) => {
             <SocialItem href='https://t.me/hartmanniecom' icon={'telegram'} title={'Telegram'} description={'300 603'} />
           </FooterBoxSocialRight>
         </FooterBoxSocial>
+        <FooterBottom>
+          <FooterBottomLeft>
+            <FooterBottomItem>
+              Реквизиты
+            </FooterBottomItem>
+            <FooterBottomItem>
+              Политика конфиденциальности
+            </FooterBottomItem>
+          </FooterBottomLeft>
+          <FooterBottomRight>
+            <PayItem icon='google' />
+            <PayItem icon='pay' />
+            <PayItem icon='visa' />
+            <PayItem icon='master' />
+            <PayItem icon='master2' />
+            <PayItem icon='webmoney' />
+          </FooterBottomRight>
+        </FooterBottom>
       </Container>
     </FooterStyled>
   )
 }
+
+const FooterBottomRight = styled.div`
+  display: flex;
+  gap: ${rem(5)};
+`
+
+const FooterBottomItem = styled.div`
+  font-weight: 400;
+  font-size: ${rem(12)};
+  line-height: ${rem(17)};
+  color: ${props => props.theme.colors.grey['600']};
+  margin-right: ${rem(44)};
+  &:last-child {
+    margin-right: 0;
+  }
+`
+
+const FooterBottomLeft = styled.div`
+  display: flex;
+`
+
+const FooterBottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
 
 const FooterBoxSocialRight = styled.div`
   display: flex;
@@ -176,6 +225,7 @@ const FooterBoxSocial = styled.div`
 
 const FooterStyled = styled.footer`
   background: ${props => props.theme.colors.background};
+  padding-bottom: ${rem(23)};
 `
 const FooterBox = styled.div`
   display: grid;
@@ -185,16 +235,13 @@ const FooterBox = styled.div`
   border-bottom: ${rem(1)} solid ${props => props.theme.colors.greyrgba['600']};
 `
 
-const FooterBoxItem = styled.div`
-  margin-right: ${rem(110)};
-`
+const FooterBoxItem = styled.div``
 
 const FooterItems = styled.ul`
   height: ${rem(120)};
   display: flex;
   flex-direction: column; 
   flex-wrap: wrap;
-  gap: 0 ${rem(50)};
 `
 
 const FooterItem = styled.li`

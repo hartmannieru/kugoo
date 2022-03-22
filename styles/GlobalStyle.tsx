@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 16px;
     font-family: 'Jost', sans-serif;
+    color: #282739;
   }
   li {
     margin: 0;
@@ -20,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     font-family: 'Jost', sans-serif;
     text-decoration: none;
+    color: #282739;
   }
   button {
     border: none;
