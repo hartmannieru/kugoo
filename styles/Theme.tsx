@@ -1,10 +1,10 @@
-import { rgba } from "polished";
-import React, {ReactNode} from "react";
-import { ThemeProvider } from "styled-components";
+import { rgba } from 'polished';
+import React, { ReactNode } from 'react';
+import { ThemeProvider } from 'styled-components';
 
 type Props = {
   children?: ReactNode;
-}
+};
 
 const theme = {
   colors: {
@@ -20,17 +20,18 @@ const theme = {
     },
     greyrgba: {
       600: rgba('#5D6C7B', 0.15),
-    }
+    },
+  },
+  radius: {
+    blog: 10,
   },
   breakpoints: {
     md: '992px',
     sm: '768px',
-    x: '576px'
-  }
+    x: '576px',
+  },
 };
 
-const Theme = ({ children }: Props) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
-);
+const Theme = ({ children }: Props) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 
-export default Theme
+export default Theme;
