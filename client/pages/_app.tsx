@@ -19,7 +19,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {
+      {isLoading ? (
+        <PreLoader />
+      ) : (
         <Theme>
           <App>
             <Header />
@@ -31,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Footer />
           </App>
         </Theme>
-      }
+      )}
     </>
   );
 }
