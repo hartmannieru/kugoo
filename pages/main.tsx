@@ -15,6 +15,8 @@ import Banner from 'components/Banner'
 import BannerTitle from 'components/BannerTitle'
 import BannerDescription from 'components/BannerDescription'
 import ButtonDefault from 'components/Buttons/ButtonDefault'
+import Bonus from 'components/Bonus'
+import Yandex from 'components/Yandex'
 
 type Props = {}
 
@@ -94,6 +96,18 @@ const MainPage = (props: Props) => {
         <ButtonDefault background='#fff' color='#6F73EE' href='catalog'>Перейти в католог</ButtonDefault>
       </Banner>
       <Container>
+        <BonusBox>
+          <Bonus title='Гарантия 1 год' description='на весь ассортимент' />
+          <Bonus title='рассрочка' description='от 6 месяцев' />
+          <Bonus title='Подарки' description='и бонусам к покупкам ' />
+          <Yandex />
+        </BonusBox>
+        <MainPageContentBox>
+          <H2>
+            Электросамокаты
+          </H2>
+          <Tabs size={'small'} />
+        </MainPageContentBox>
         <H2 align='center' marginBottom={18}>
           Предлагаем самые выгодные цены <br /> на продукты Kugoo за счет прямых поставок
         </H2>
@@ -116,6 +130,20 @@ const MainPage = (props: Props) => {
     </MainPageStyled>
   )
 }
+
+const MainPageContentBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const BonusBox = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, ${rem(210)}) 1fr;
+  align-items: center;
+  gap: ${rem(90)};
+  margin-bottom: ${rem(81)};
+`
 
 const MainPageText = styled.div`
   font-weight: 400;
