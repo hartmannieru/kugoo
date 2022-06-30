@@ -24,6 +24,7 @@ const theme = {
   },
   radius: {
     blog: 10,
+    empty: 10,
   },
   breakpoints: {
     md: '992px',
