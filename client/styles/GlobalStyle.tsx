@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components"
-import { rem } from 'polished'
+import { createGlobalStyle } from 'styled-components';
+import { rem } from 'polished';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-family: 'Jost', sans-serif;
     color: #282739;
+    overflow-x: hidden;
   }
   li {
     margin: 0;
@@ -46,5 +47,5 @@ const GlobalStyle = createGlobalStyle`
   .swiper-button-prev::after {
     transform: rotate(180deg);
   }
-`
-export default GlobalStyle
+`;
+export default GlobalStyle;

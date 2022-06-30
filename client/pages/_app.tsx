@@ -9,6 +9,8 @@ import Subscribe from 'components/Subscribe';
 import React, { useEffect, useState } from 'react';
 import PreLoader from 'components/PreLoader';
 
+import 'styles/swiper.scss';
+
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
