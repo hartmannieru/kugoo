@@ -5,16 +5,19 @@ import H3 from './Titles/H3';
 import ButtonDefault from './Buttons/ButtonDefault';
 import Image from 'next/image';
 
-type Props = {};
+type Props = {
+  title: string;
+  description: string;
+};
 
-const Empty = (props: Props) => {
+const Empty = ({ title, description }: Props) => {
   return (
     <EmptyBox>
       <EmptyImg>
         <Image src={'/images/empty.svg'} layout="fill" alt="empty"></Image>
       </EmptyImg>
-      <H3 marginBottom={5}>Ваша корзина пуста</H3>
-      <EmptyText>Добавьте в нее товары из каталога</EmptyText>
+      <H3 marginBottom={5}>{title}</H3>
+      <EmptyText>{description}</EmptyText>
       <ButtonDefault>Перейти в каталог</ButtonDefault>
     </EmptyBox>
   );

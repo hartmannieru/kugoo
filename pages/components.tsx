@@ -9,6 +9,7 @@ import items from './api/accordion-db';
 import Accordion from 'components/Accordion';
 import LinkDefault from 'components/LinkDefault';
 import Article from 'components/Article';
+import Breadcrumbs from 'components/Breadcrumbs';
 
 type Props = {};
 
@@ -16,6 +17,10 @@ const ComponentsPages = (props: Props) => {
   return (
     <ComponentsPagesStyled>
       <Container>
+        <ComponentsPagesTitle>Хлебные крошки</ComponentsPagesTitle>
+        <ComponentsPagesBox>
+          <Breadcrumbs />
+        </ComponentsPagesBox>
         <ComponentsPagesTitle>Этикетки</ComponentsPagesTitle>
         <ComponentsPagesBox>
           <Label>Рассрочка</Label>
